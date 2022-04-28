@@ -14,8 +14,8 @@ for i in range(len(moto_class)):
     }
     train_history = build_train_model(train_generator, test_generator, class_weight, 2, './weight/model' + str(i) + '.h5')
 
-    # show_train_history(train_history, 'accuracy','val_accuracy')
-    # show_train_history(train_history, 'loss','val_loss')
+    show_train_history(train_history, 'accuracy','val_accuracy')
+    show_train_history(train_history, 'loss','val_loss')
 
 
 # ['BWS', 'CYGNUS Gryphus', 'CygnusX', 'Force', 'GP125', 'jet_sl', 'jet_S_SR', 'KRV', 'racing _s', 'VJR']

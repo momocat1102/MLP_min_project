@@ -65,7 +65,6 @@ def show_train_history(train_history, train_acc, test_acc):
 train_generator, test_generator = set_generator('./data_min_motorcycle')
 print(test_generator.class_indices)
 model = build_model(10)
-print(model.summary())
 # # {'BWS': 0, 'CYGNUS Gryphus': 1, 'CygnusX': 2, 'Force': 3, 'GP125': 4, 'KRV': 5, 'VJR': 6, 'jet_S_SR': 7, 'jet_sl': 8, 'racing _s': 9}
 # class_weight = {
 #         0: 2.,
@@ -95,6 +94,7 @@ print(model.summary())
 
 # show_train_history(train_history, 'accuracy','val_accuracy')
 # show_train_history(train_history, 'loss','val_loss')
+
 
 # 進行預測
 path = './test_dataset'

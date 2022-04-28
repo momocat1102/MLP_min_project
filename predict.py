@@ -23,7 +23,6 @@ for img in lis:
     test_img = test_img.reshape(1, 224, 224, 3).astype('float32') 
     test_img = test_img / 255.
     all_img += 1
-    # ['BWS', 'CYGNUS Gryphus', 'CygnusX', 'Force', 'GP125', 'jet_s', 'jet_sl', 'jet_sr', 'KRV', 'racing _s', 'VJR']
     pred_list = [i for i in range(len(moto_class))]
 
     for i in range(len(moto_class)):
@@ -74,14 +73,3 @@ plt.show()
 #     pred = tf.argmax(model.predict(test_generator, verbose=1), axis=1).numpy().tolist()
 #     # pred = model.predict(test_generator, verbose=1).tolist()
 #     print(pred)
-
-# for img in lis:
-#     label = img.split('.')[0].split('_')[0]
-#     labels_list.append(int(label))
-#     test_img = cv2.imread(path + '/' + img, cv2.IMREAD_COLOR)
-#     test_img = cv2.resize(test_img, (224, 224))
-#     test_img = test_img.reshape(1, 224, 224, 3).astype('float32')
-#     test_img = test_img / 255.
-#     model = build_model(2, './weight/model0.h5')
-#     pred = model.predict(test_img, verbose=1).tolist()[0][1]
-#     print(pred, img)
