@@ -1,0 +1,3 @@
+cuda v11.4
+cudnn v8.2.4
+tensorflow 2.8.0
